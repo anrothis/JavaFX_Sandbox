@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckMenuItem?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="myPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="554.0" prefWidth="207.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="exampleDate.Controller">
+   <children>
+      <DatePicker fx:id="myDate" layoutX="19.0" layoutY="75.0" onAction="#setDate" promptText="Enter a Date" showWeekNumbers="true" />
+      <Label fx:id="myLabel" alignment="CENTER" contentDisplay="CENTER" layoutY="32.0" prefHeight="17.0" prefWidth="207.0" text="Label" textAlignment="CENTER">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <ColorPicker fx:id="myColor" layoutX="38.0" layoutY="109.0" onAction="#changeColor">
+         <value>
+            <Color red="0.8421052694320679" green="0.01949317753314972" blue="0.01949317753314972" />
+         </value>
+      </ColorPicker>
+      <ListView fx:id="myField" layoutX="4.0" layoutY="183.0" prefHeight="96.0" prefWidth="200.0" />
+      <Label fx:id="myFoodLabel" layoutX="59.0" layoutY="166.0" text="Essen auswählen" />
+      <TreeView fx:id="myTreeView" layoutX="4.0" layoutY="293.0" onContextMenuRequested="#selectItem" onMouseClicked="#selectItem" prefHeight="255.0" prefWidth="200.0" />
+      <MenuBar layoutX="-5.0" layoutY="-1.0" prefHeight="25.0" prefWidth="213.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem fx:id="newButton" mnemonicParsing="false" onAction="#newMethod" text="New">
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="N" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" text="Save" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Test">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Action" />
+                  <CheckMenuItem mnemonicParsing="false" text="Testitest" />
+                  <RadioMenuItem mnemonicParsing="false" selected="true" text="Opt 1">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Opt" />
+                     </toggleGroup>
+                  </RadioMenuItem>
+                  <RadioMenuItem mnemonicParsing="false" text="Opt 2" toggleGroup="$Opt" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

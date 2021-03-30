@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="592.0" prefWidth="903.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="exampleWebView.Controller">
+   <children>
+      <TextField fx:id="textField" layoutY="535.0" onAction="#loadPage" prefHeight="22.0" prefWidth="903.0" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <Button fx:id="reloadButton" layoutX="14.0" layoutY="565.0" mnemonicParsing="false" onAction="#loadPage" text="Reload" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" />
+      <Button fx:id="refreshButton" layoutX="159.0" layoutY="565.0" mnemonicParsing="false" onAction="#refreshPage" text="Refresh" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="159.0" />
+      <WebView fx:id="webView" prefHeight="503.0" prefWidth="903.0" AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Button fx:id="zoomInButton" layoutX="219.0" layoutY="565.0" mnemonicParsing="false" onAction="#zoomIn" text="+" AnchorPane.bottomAnchor="5.0" />
+      <Button fx:id="zoomOutButton" layoutX="248.0" layoutY="565.0" mnemonicParsing="false" onAction="#zoomOut" text="-" AnchorPane.bottomAnchor="5.0" />
+      <Button fx:id="historyButton" layoutX="306.0" layoutY="565.0" mnemonicParsing="false" onAction="#displayHistory" text="History" AnchorPane.bottomAnchor="5.0" />
+      <Button fx:id="backButton" layoutX="77.0" layoutY="564.0" mnemonicParsing="false" onAction="#backward" text="&lt;-" AnchorPane.bottomAnchor="5.0" />
+      <Button fx:id="forButton" layoutX="111.0" layoutY="563.0" mnemonicParsing="false" onAction="#forward" text="-&gt;" AnchorPane.bottomAnchor="5.0" />
+      <Button layoutX="400.0" layoutY="564.0" mnemonicParsing="false" onAction="#executeJS" text="exec JS" AnchorPane.bottomAnchor="5.0" />
+   </children>
+</AnchorPane>
